@@ -14,7 +14,7 @@ public class Proj05JdbcFetchDataApplication {
 	
 	       PayrollOperationControler controller = run.getBean("payrollController", PayrollOperationControler.class);
 	       try {
-			controller.showEmployeesByDesgs("dse", "sdel", "sas")
+			controller.showEmployeesByDesgs("SDE", "sdel", "SE")
 			   		.forEach(emp -> {
 			   			System.out.println(emp.getEid() + " " + emp.getEname() + " " + emp.getEdesg() + " "
 			   					+ emp.getBsal() + " " + emp.getHra() + " " + emp.getDa() + " " + emp.getTotsal());

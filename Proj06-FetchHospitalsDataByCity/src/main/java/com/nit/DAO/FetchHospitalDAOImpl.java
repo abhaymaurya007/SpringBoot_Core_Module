@@ -31,7 +31,7 @@ public class FetchHospitalDAOImpl implements FetchHospitalDAO {
 			try (ResultSet rs = ps.executeQuery()) {
 				while (rs.next()) {
 					Hospital hospital = new Hospital();
-					hospital.setId(rs.getInt("hid"));
+					hospital.setId(rs.getInt("id"));
 					hospital.setName(rs.getString("name"));
 					hospital.setCity(rs.getString("city"));
 					hospitals.add(hospital);

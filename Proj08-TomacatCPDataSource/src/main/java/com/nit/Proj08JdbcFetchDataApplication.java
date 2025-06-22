@@ -7,14 +7,14 @@ import org.springframework.context.ConfigurableApplicationContext;
 import com.nit.Controller.PayrollOperationControler;
 
 @SpringBootApplication
-public class Proj05JdbcFetchDataApplication {
+public class Proj08JdbcFetchDataApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext run = SpringApplication.run(Proj05JdbcFetchDataApplication.class, args);
+		ConfigurableApplicationContext run = SpringApplication.run(Proj08JdbcFetchDataApplication.class, args);
 	
 	       PayrollOperationControler controller = run.getBean("payrollController", PayrollOperationControler.class);
 	       try {
-			controller.showEmployeesByDesgs("dse", "sdel", "sas")
+			controller.showEmployeesByDesgs("SDE", "sdel", "SE")
 			   		.forEach(emp -> {
 			   			System.out.println(emp.getEid() + " " + emp.getEname() + " " + emp.getEdesg() + " "
 			   					+ emp.getBsal() + " " + emp.getHra() + " " + emp.getDa() + " " + emp.getTotsal());

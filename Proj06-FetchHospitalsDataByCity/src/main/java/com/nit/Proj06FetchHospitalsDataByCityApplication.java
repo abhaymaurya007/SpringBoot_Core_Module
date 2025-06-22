@@ -12,7 +12,7 @@ public class Proj06FetchHospitalsDataByCityApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext run = SpringApplication.run(Proj06FetchHospitalsDataByCityApplication.class, args);
 	    FetchHospitals fetchHospitals = run.getBean("fetchHospitalsController", FetchHospitals.class);
-	     fetchHospitals.getHospitalsByCity("hyderabad").forEach(System.out::println);
+	     fetchHospitals.getHospitalsByCity("Mumbai").forEach(System.out::println);
 	   run.close();
 	
 	}
